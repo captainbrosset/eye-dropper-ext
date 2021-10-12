@@ -1,0 +1,22 @@
+{
+  "name": "eye-dropper-ext",
+  "version": "0.1.0",
+  "description": "A browser extension to sample colors from your screen",
+  "main": "create-dist.js",
+  "scripts": {
+    "dist": "node create-dist.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/captainbrosset/eye-dropper-ext.git"
+  },
+  "author": "Patrick Brosset",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/captainbrosset/eye-dropper-ext/issues"
+  },
+  "homepage": "https://github.com/captainbrosset/eye-dropper-ext#readme",
+  "dependencies": {
+    "archiver": "^5.3.0"
+  }
+}
