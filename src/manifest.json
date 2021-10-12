@@ -1,6 +1,6 @@
 {
     "name": "Eye Dropper",
-    "version": "0.0.0.1",
+    "version": "0.1",
     "manifest_version": 2,
     "description": "A browser extension to copy colors from your screen",
     "homepage_url": "https://github.com/captainbrosset/eye-dropper-ext/",
