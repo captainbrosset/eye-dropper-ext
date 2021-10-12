@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  html {
+    width: 200px;
+  }
+  
+  body {
+    text-align: center;
+    margin: 1rem;
+    background-color: #ebf3f7;
+  }
+  
+  button {
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .colors {
+    margin: 1rem 0 0 0;
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .colors .color {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    flex: none;
+    cursor: pointer;
+  }
+  
+  .message {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    width: calc(100% - 2rem);
+    left: 1rem;
+    background: #92d1f1;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 2px solid;
+    height: calc(100% - 2rem);
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+<button title='Pick a color from your screen, add it to your colors, and the clipboard'>Pick a color</button>
+<ul class="colors"></ul>
+<div class="message"></div>
+<script src="popup.js" nonce="8IBTHwOdqNKAWeKl7plt8g=="></script>
