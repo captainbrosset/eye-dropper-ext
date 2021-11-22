@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <style>
   html {
-    width: 200px;
+    width: 250px;
+    font-size: 20px;
   }
   
   body {
@@ -15,6 +16,7 @@
     border: 2px solid black;
     border-radius: 4px;
     cursor: pointer;
+    font-size: inherit;
   }
   
   .colors {
@@ -28,13 +30,44 @@
   }
   
   .colors .color {
+    color: white;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid currentColor;
     box-sizing: border-box;
     flex: none;
     cursor: pointer;
+    position: relative;
+  }
+
+  .colors .color:hover {
+    color: black;
+  }
+  
+  .colors .color .del {
+    cursor: pointer;
+    position: absolute;
+    top: -.25rem;
+    right: -.25rem;
+    border-radius: 50%;
+    opacity: 0;
+    background: inherit;
+    outline: 2px solid currentColor;
+    width: .75rem;
+    height: .75rem;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(-7px -2px, 116.67% -3px, 125% 133.33%, 57.92% 100%, 33.33% 91.67%, 11.67% 77.21%, 0px 50%);
+  }
+  
+  .colors .color .del::before {
+    content: '❌';
+    font-size: .5rem;
+  }
+  
+  .colors .color:hover .del {
+    opacity: 1;
   }
   
   .message {

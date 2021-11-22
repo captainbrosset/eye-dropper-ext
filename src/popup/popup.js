@@ -28,14 +28,24 @@ function addColor(color) {
   const el = document.createElement('li');
   el.classList.add('color');
   el.style.backgroundColor = color;
-
   el.title = `${color} - click to copy to the clipboard`;
+  
+  const delEl = document.createElement('span');
+  delEl.classList.add('del');
+  delEl.title = `Click to delete this color`;
+  el.appendChild(delEl);
 
   colorsEl.appendChild(el);
 
-  el.addEventListener('click', async () => {
-    await sendToClipboard(color);
-    await showMessageAndHide(color);
+  el.addEventListener('click', async (e) => {
+    const isDel = e.target.classList.contains('del');
+    if (isDel) {
+      el.remove();
+      removeFromStore(color);
+    } else {
+      await sendToClipboard(color);
+      await showMessageAndHide(color);
+    }
   });
 }
 
@@ -83,6 +93,20 @@ function store(color) {
 
   if (!colors.includes(color)) {
     colors.push(color);
+  }
+
+  setStored(colors);
+}
+
+function removeFromStore(color) {
+  let colors = getStored();
+  if (!Array.isArray(colors)) {
+    return;
+  }
+
+  const index = colors.findIndex(c => c === color);
+  if (index > -1) {
+    colors.splice(index, 1);
   }
 
   setStored(colors);
