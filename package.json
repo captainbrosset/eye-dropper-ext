@@ -2,7 +2,6 @@
   "name": "eye-dropper-ext",
   "version": "0.1.0",
   "description": "A browser extension to sample colors from your screen",
-  "main": "create-dist.js",
   "scripts": {
     "dist": "node create-dist.js"
   },
