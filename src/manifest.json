@@ -3,7 +3,7 @@
     "description": "A browser extension to copy colors from your screen",
     "homepage_url": "https://github.com/captainbrosset/eye-dropper-ext/",
     "author": "Patrick Brosset",
-    "version": "0.1",
+    "version": "0.2.0",
     "manifest_version": 3,
     "icons": {
         "16": "icons/icon16.png",
